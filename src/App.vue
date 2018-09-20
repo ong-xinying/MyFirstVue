@@ -1,21 +1,22 @@
 <template>
   <div id="app" style="height:100%">
-    <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
-    <router-link v-bind:to="'/Home'">Home</router-link>
-    <router-link v-bind:to="'/Projects'">Projects</router-link>
-    <router-link v-bind:to=" '/Photos'">Curated</router-link>
-    <router-link v-bind:to="'/Singapore'">Singapore</router-link>
-    <router-link v-bind:to="'/SayHi'">Say Hi</router-link>
-    <router-link v-bind:to="'/About'">About</router-link>
-     </nav>
+    <navi></navi>
     <router-view></router-view>
+    <foot></foot>
   </div>
 </template>
 
 <script>
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
+export default {
+  components: {
+    'Navi': Navigation,
+    'Foot': Footer
+  }
+}
 </script>
-
 
 <style scoped>
 #app {
@@ -23,28 +24,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 0px;
-  background-image: url('https://images.pexels.com/photos/240225/pexels-photo-240225.jpeg');
+  color: #3f4d63;
+  /* background-image: url('https://images.pexels.com/photos/240225/pexels-photo-240225.jpeg'); */
   background-size: 100%;
   background-repeat: no-repeat;
-  position:fixed;
+  background-attachment: fixed;
   width:100%;
   height:100%;
   top:0px;
   left:0px;
-  z-index:1000;
+  overflow: hidden;
 }
-
 a {
-  color: #2c3e50;
-  margin-right: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: #3f4d63;
 }
-
 a:hover {
-  color: #000000; 
-}
-
+  color: #3f4d63; 
+} 
 </style>

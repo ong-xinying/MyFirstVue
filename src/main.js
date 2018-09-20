@@ -13,7 +13,7 @@ import VueCarousel from 'vue-carousel';
 import VueRouter from 'vue-router'
 
 import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbvue/build/css/mdb.css';
 
 Vue.use(VueCarousel);

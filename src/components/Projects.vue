@@ -1,38 +1,31 @@
 <template>
-  <div class="projects" style="margin:20px">
-    <div class="row justify-content-center">
-    <div class="col-3">
-      
+  <div class="projects">
+    <div class="row justify-content-center" style="margin-top:70px">
+    <div class="col-sm-3">
+     <card id="card1">
+       <card-body>
+         <card-title><h5>Github Repositories</h5></card-title>
+        <li v-for="item in info" v-bind:key="item.name"> <a v-bind:href="item.html_url">
+          {{item.name}}</a>
+         </li>
+       </card-body>
+  <br>
+    </card> 
     </div>
-    <div class="col-6">
+    <div class="col-sm-6" style="margin-bottom:20px">
       <card>
-      <card-title>My Github Repositories</card-title>
-   <carousel :per-page="1">
-    <slide>
-    <ul>
-        <li v-for="item in info">{{item.name}}</li>
-        </ul>
-    </slide>
-    <slide>
-       <a v-if="info[0]" :href="info[0].html_url">{{info[0] && info[0].html_url}}</a>
-    {{info[1] && info[1].html_url}}
-    {{info[2] && info[2].html_url}}
-       
-    </slide>
-    <slide>
-    <card-img :src="require(`@/assets/item1.jpg`)" alt="Photo Dead"></card-img>
-    </slide>
-    <slide>
-    <card-img :src="require(`@/assets/night1.jpg`)" alt="Photo Dead"></card-img>
-    </slide>
-  </carousel>
-  </card>
+        <card-body>
+        <carousel :navigateTo="pageNo" :per-page="1">
+        <slide v-for="item in info" v-bind:key="item.name">
+      <!--<a v-if="info[0]" :href="info[0].html_url">{{info[0] && info[0].html_url}}</a>-->
+        <card-title><h5>{{item.name}}</h5></card-title>
+        <card-img v-bind:src="require('@/assets/'+item.name+'.png')" alt="Photo Dead"></card-img>
+        </slide> 
+        </carousel>
+        </card-body>
+      </card>
     </div>
-    <div class="col-3">
-      <card>
-</card>
     </div>
-</div>
   </div>
 </template>
 
@@ -45,7 +38,8 @@ export default {
     return {
       msg: "A Simple Vue Web App",
       info: [],
-      item: ''
+      item: '',
+      pageNo: 1
     };
   },
   components: {
@@ -66,22 +60,31 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-weight: normal;
   margin: 20px;
+  color: #3f4d63;
+}
+h5 {
+  color: #3f4d63;
 }
 ul {
   list-style-type: none;
   padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+  display: block;
+  margin: 5px 25px;
+  
 }
 a {
-  color: #42b983;
+  color: #3f4d63;
+}
+a:hover {
+  color: #3f4d63;
+  text-decoration: underline;
+}
+#card1 {
+  text-align: left;
 }
 </style>

@@ -32,7 +32,7 @@ const routes = [
 // You can pass in additional options here
 const router = new VueRouter({
   routes, // short for routes: routes
-  mode: 'history',
+  mode: 'hash',
   base: '/MyFirstVue/'
 })
 

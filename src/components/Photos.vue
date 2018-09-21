@@ -22,7 +22,7 @@ export default {
       images: [
         { 
           id: "i1",
-          url: "https://i.imgur.com/lae3qII.png",
+          url: require(`@/assets/plants.jpg`),
           alt: 'Trees near a mushroom farm in Taiwan'
         },
         { 

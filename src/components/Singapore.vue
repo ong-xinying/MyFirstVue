@@ -46,7 +46,7 @@ export default {
   },
   mounted () {
     axios
-      .get('http://api.openweathermap.org/data/2.5/weather?id=1880252&APPID=474e2fb5a113dfb7843c5cff410241c1')
+      .get('https://api.openweathermap.org/data/2.5/weather?id=1880252&APPID=474e2fb5a113dfb7843c5cff410241c1')
       .then(response => (this.info = response.data));
   }
 }

@@ -14,8 +14,8 @@
     </div>
     <div class="col-sm-6" style="margin-bottom:20px">
       <card>
-        <card-body>
-        <carousel :navigateTo="pageNo" :per-page="1">
+        <card-body class="cardBody">
+        <carousel :navigationEnabled="true" :navigateTo="pageNo" :per-page="1">
         <slide v-for="item in info" v-bind:key="item.name">
       <!--<a v-if="info[0]" :href="info[0].html_url">{{info[0] && info[0].html_url}}</a>-->
         <card-title><h5>{{item.name}}</h5></card-title>
@@ -86,5 +86,8 @@ a:hover {
 }
 #card1 {
   text-align: left;
+}
+.cardBody {
+  margin: 8px;
 }
 </style>

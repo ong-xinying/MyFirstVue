@@ -1,8 +1,8 @@
 <template>
   <div id="capture" class="photos" style="margin-top:50px">
+  <center>
   <button type="button" class="btn" id="button1" v-on:click="newCanvas">New Palette</button>
   <button type="button" class="btn" id="button2" v-on:click="print">Download</button>
-  <center>
    <div id="colorPlate" class="row">
    <div class="col" v-bind:style="{'background-color': randomColor(0)}">
     <div class="fontControl"> {{colorToHex(color[0])}}
@@ -25,7 +25,7 @@
     </div>
    </div>
 </div>
-    </center>
+</center>
 </div>
 </template>
 <script>

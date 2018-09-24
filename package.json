@@ -14,6 +14,7 @@
     "axios": "^0.18.0",
     "eslint": "^3.19.0",
     "eslint-plugin-vue": "^3.14.0",
+    "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^1.9.1",
     "mdbvue": "^4.5.1",
     "vue": "^2.5.17",

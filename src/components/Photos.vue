@@ -3,8 +3,8 @@
     <center>
     <row>
       <column sm="4" v-for="(image, index) in images" v-bind:key="image.id">
-      <!-- <div v-bind:id="image.id" v-bind:style="{ backgroundImage: `url(${image.url})`}" @mouseover="showComments= index" @mouseleave="showComments= -1"> -->
-      <div id="divMain" v-bind:style="{ backgroundImage: `url(${image.url})`}" @mouseover="showComments= index" @mouseleave="showComments= -1">
+      <!-- <div v-bind:id="image.id" v-bind:style="{'backgroundImage': `url(${image.url})`, 'background-color': randomColor(index)}" @mouseover="showComments= index" @mouseleave="showComments= -1"> -->
+      <div tabindex="0" id="divMain" v-bind:style="{backgroundImage: `url(${image.url})`}" @mouseover="showComments= index" @mouseleave="showComments= -1">
        <div class="overlay" v-show="showComments == index">{{image.alt}}</div>
       </div>
       </column>
@@ -19,11 +19,12 @@ export default {
   data() {
     return {
       showComments: -1,
+      color: ['red', 'blue'],
       images: [
         { 
           id: "i1",
           url: require(`@/assets/plants.jpg`),
-          alt: 'Trees near a mushroom farm in Taiwan'
+          alt: 'Trees near a mushroom farm in Taiwan',
         },
         { 
           id: "i2",

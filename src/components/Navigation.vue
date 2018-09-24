@@ -35,8 +35,13 @@ export default {
           text: 'Photos',
           page: '/Photos'
         },
-        { 
+        {
           id: 3,
+          text: 'Palette', 
+          page: '/Palette'
+        },
+        { 
+          id: 4,
           text: 'Singapore', 
           page: '/Singapore' 
         }

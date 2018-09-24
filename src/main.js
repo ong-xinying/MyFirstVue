@@ -6,6 +6,7 @@ import App from './App'
 import Home from './components/Home'
 import Projects from './components/Projects'
 import Photos from './components/Photos'
+import Palette from './components/Palette'
 import Singapore from './components/Singapore'
 import VueCarousel from 'vue-carousel';
 
@@ -23,8 +24,9 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/Home', component: Home },
   { path: '/Projects', component: Projects },
-  { path: '/Singapore', component: Singapore },
   { path: '/Photos', component: Photos},
+  { path: '/Palette', component: Palette },
+  { path: '/Singapore', component: Singapore },
   { path: '/*', component: Home}
 ]
 
